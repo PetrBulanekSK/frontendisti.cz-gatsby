@@ -5,8 +5,11 @@ publish_mode: editorial_workflow
 media_folder: static/images/uploads
 
 collections:
-  - label: "Akce"
-    name: "events"
-    folder: "events"
+  - label: Akce
+    name: events
+    folder: events
+    create: true
     fields:
-      - {label: "Název", name: "title", widget: "string"}
+      - label: Název
+        name: title
+        widget: string
