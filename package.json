@@ -17,6 +17,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-netlify-cms": "^1.0.12",
+    "netlify-cms": "^1.4.0",
     "prettier": "^1.11.1"
   }
 }

@@ -1,0 +1,12 @@
+backend:
+  name: git-gateway
+
+publish_mode: editorial_workflow
+media_folder: "static/media"
+
+collections:
+  - label: "Akce"
+    name: "events"
+    folder: "events"
+    fields:
+      - {label: "Název", name: "title", widget: "string"}
