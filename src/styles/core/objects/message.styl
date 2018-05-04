@@ -1,0 +1,21 @@
+.message
+	padding 15px 20px
+	background $colorPrimary
+	color #fff
+	> :last-child
+		margin-bottom 0
+	li
+		&:before
+			background #fff
+	a
+		color #fff
+
+	// VARIANTS
+	&--error
+		background $colorRed
+
+	&--ok
+		background $colorGreen
+
+	&--warning
+		background $colorOrange

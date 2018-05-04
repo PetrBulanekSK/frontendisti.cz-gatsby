@@ -1,0 +1,80 @@
+// row-main
+.row-main
+	clearfix()
+	position relative
+	margin 0
+	padding 0
+	margin 0 auto
+	padding 0 $rowMainGutter
+	max-width $rowMainWidth
+
+// grid
+.grid
+	@extend $reset-ol
+	@extend $grid
+	margin-left -($gridGutter)
+	&__cell
+		@extend $reset-ol-li
+		@extend $grid__cell
+		position relative
+		border $gridGutter solid transparent
+		border-width 0 0 0 $gridGutter
+		&--top
+			align-self flex-start
+		&--middle
+			align-self center
+		&--bottom
+			align-self flex-end
+		&--eq
+			display flex
+			> *
+				flex 1 1 auto
+
+	// VARIANTS
+	&--scroll
+		@extend $grid--scroll
+
+	// horizontal
+	&--middle
+		align-items center
+
+	&--bottom
+		align-items flex-end
+
+	// vertical
+	&--center
+		justify-content center
+
+	&--right
+		justify-content flex-end
+
+	&--space-between
+		justify-content space-between
+
+	// STATES
+	// horizontal
+	.no-flexwrap &--middle &__cell
+		vertical-align middle
+
+	.no-flexwrap &--bottom &__cell
+		vertical-align bottom
+
+	// vertical
+	.no-flexwrap &--center &__cell
+		text-align center
+
+	.no-flexwrap &--right &__cell
+		text-align right
+
+
+.size
+	generateGridSize()
+
+.push
+	generateGridPush()
+
+.pull
+	generateGridPull()
+
+.order
+	generateGridOrder()
